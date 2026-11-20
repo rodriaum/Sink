@@ -54,6 +54,6 @@ useHead(() => ({
   <NuxtLayout>
     <NuxtLoadingIndicator color="var(--primary)" />
     <NuxtPage />
-    <Toaster position="top-center" rich-colors />
+    <Toaster position="bottom-right" rich-colors />
   </NuxtLayout>
 </template>

@@ -146,7 +146,7 @@ function getNumberInputChangeValue(event: Event) {
       </Button>
       <Button
         type="button"
-        variant="destructive"
+        variant="secondary-destructive"
         :disabled="checking || !hasResults"
         @click="clearDialogOpen = true"
       >

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ChevronDownIcon } from '@lucide/vue';
+import type { AcceptableValue } from 'reka-ui'
 
-import type { AcceptableValue } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import { reactiveOmit, useVModel } from "@vueuse/core"
-import { cn } from "@/lib/utils"
+import type { HTMLAttributes } from 'vue'
+import { ChevronDownIcon } from '@lucide/vue'
+import { reactiveOmit, useVModel } from '@vueuse/core'
+import { cn } from 'cn'
 
 defineOptions({
   inheritAttrs: false,
@@ -12,25 +12,25 @@ defineOptions({
 
 const props = defineProps<{
   modelValue?: AcceptableValue | AcceptableValue[]
-  class?: HTMLAttributes["class"]
-  size?: "sm" | "default"
+  class?: HTMLAttributes['class']
+  size?: 'sm' | 'default'
 }>()
 
 const emit = defineEmits<{
-  "update:modelValue": AcceptableValue
+  'update:modelValue': AcceptableValue
 }>()
 
-const modelValue = useVModel(props, "modelValue", emit, {
+const modelValue = useVModel(props, 'modelValue', emit, {
   passive: true,
-  defaultValue: "",
+  defaultValue: '',
 })
 
-const delegatedProps = reactiveOmit(props, "class", "size")
+const delegatedProps = reactiveOmit(props, 'class', 'size')
 </script>
 
 <template>
   <div
-    class="group/native-select relative w-fit has-[select:disabled]:opacity-50"
+    :class="cn('group/native-select relative w-fit has-[select:disabled]:opacity-50', props.class)"
     data-slot="native-select-wrapper"
     :data-size="props.size ?? 'default'"
   >
@@ -38,11 +38,8 @@ const delegatedProps = reactiveOmit(props, "class", "size")
       v-bind="{ ...$attrs, ...delegatedProps }"
       v-model="modelValue"
       data-slot="native-select"
+      class="border-input bg-input/30 placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 dark:hover:bg-input/50 focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 h-9 w-full min-w-0 appearance-none rounded-4xl border py-1 pr-8 pl-3 text-sm transition-colors select-none focus-visible:ring-3 aria-invalid:ring-3 data-[size=sm]:h-8 outline-none disabled:pointer-events-none disabled:cursor-not-allowed"
       :data-size="props.size ?? 'default'"
-      :class="cn(
-        'border-input bg-input/30 placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 dark:hover:bg-input/50 focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 h-9 w-full min-w-0 appearance-none rounded-4xl border py-1 pr-8 pl-3 text-sm transition-colors select-none focus-visible:ring-3 aria-invalid:ring-3 data-[size=sm]:h-8 outline-none disabled:pointer-events-none disabled:cursor-not-allowed',
-        props.class,
-      )"
     >
       <slot />
     </select>

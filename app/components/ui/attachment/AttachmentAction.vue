@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue"
-import type { ButtonVariants } from "../button"
-import { cn } from "@/lib/utils"
+import type { HTMLAttributes } from 'vue'
+import type { ButtonVariants } from '../button'
+import { cn } from 'cn'
 import { Button } from '@/components/ui/button'
 
 const props = withDefaults(defineProps<{
-  class?: HTMLAttributes["class"]
-  variant?: ButtonVariants["variant"]
-  size?: ButtonVariants["size"]
+  class?: HTMLAttributes['class']
+  variant?: ButtonVariants['variant']
+  size?: ButtonVariants['size']
 }>(), {
-  variant: "ghost",
-  size: "icon-xs",
+  variant: 'ghost',
+  size: 'icon-xs',
 })
 </script>
 

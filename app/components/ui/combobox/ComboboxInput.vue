@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { SearchIcon } from '@lucide/vue';
+import type { ComboboxInputEmits, ComboboxInputProps } from 'reka-ui'
 
-import type { ComboboxInputEmits, ComboboxInputProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import { reactiveOmit } from "@vueuse/core"
-import { ComboboxInput, useForwardPropsEmits } from "reka-ui"
-import { cn } from "@/lib/utils"
+import type { HTMLAttributes } from 'vue'
+import { SearchIcon } from '@lucide/vue'
+import { reactiveOmit } from '@vueuse/core'
+import { cn } from 'cn'
+import { ComboboxInput, useForwardPropsEmits } from 'reka-ui'
 import { InputGroup, InputGroupAddon } from '@/components/ui/input-group'
 
 defineOptions({
@@ -13,18 +13,18 @@ defineOptions({
 })
 
 const props = defineProps<ComboboxInputProps & {
-  class?: HTMLAttributes["class"]
+  class?: HTMLAttributes['class']
 }>()
 
 const emits = defineEmits<ComboboxInputEmits>()
 
-const delegatedProps = reactiveOmit(props, "class")
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <InputGroup>
+  <InputGroup class="w-auto">
     <InputGroupAddon>
       <SearchIcon class="size-4 shrink-0 opacity-50" />
     </InputGroupAddon>

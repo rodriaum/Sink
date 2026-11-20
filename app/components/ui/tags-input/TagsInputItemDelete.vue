@@ -4,7 +4,7 @@ import type { TagsInputItemDeleteProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { XIcon } from '@lucide/vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { TagsInputItemDelete, useForwardProps } from 'reka-ui'
 
 const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>()

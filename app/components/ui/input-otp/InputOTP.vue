@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 import type { OTPInputEmits, OTPInputProps } from 'vue-input-otp'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { useForwardPropsEmits } from 'reka-ui'
 import { OTPInput } from 'vue-input-otp'
 

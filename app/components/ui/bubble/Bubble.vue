@@ -2,7 +2,7 @@
 import type { PrimitiveProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import type { BubbleVariants } from '.'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { Primitive } from 'reka-ui'
 import { bubbleVariants } from '.'
 

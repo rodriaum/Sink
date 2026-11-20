@@ -4,7 +4,7 @@ import type { RadioGroupItemProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { CircleIcon } from '@lucide/vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import {
   RadioGroupIndicator,
   RadioGroupItem,

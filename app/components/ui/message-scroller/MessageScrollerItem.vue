@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { onBeforeUnmount, onMounted, useTemplateRef, watch } from 'vue'
 import { useMessageScrollerRegister } from './useMessageScroller'
 

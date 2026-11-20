@@ -2,7 +2,7 @@
 import type { StepperSeparatorProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { StepperSeparator, useForwardProps } from 'reka-ui'
 
 const props = defineProps<StepperSeparatorProps & { class?: HTMLAttributes['class'] }>()

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 import type { AvatarVariants } from '.'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { AvatarRoot } from 'reka-ui'
 import { avatarVariants } from '.'
 

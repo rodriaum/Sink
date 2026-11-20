@@ -2,7 +2,7 @@
 import type { RangeCalendarCellProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { RangeCalendarCell, useForwardProps } from 'reka-ui'
 
 const props = defineProps<RangeCalendarCellProps & { class?: HTMLAttributes['class'] }>()

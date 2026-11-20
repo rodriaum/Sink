@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'vue'
 
 import { PanelLeftIcon } from '@lucide/vue'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { Button } from '@/components/ui/button'
 import { useSidebar } from './utils'
 

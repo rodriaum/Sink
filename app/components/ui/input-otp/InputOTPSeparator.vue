@@ -3,7 +3,7 @@ import type { HTMLAttributes } from 'vue'
 
 import { MinusIcon } from '@lucide/vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { useForwardProps } from 'reka-ui'
 
 const props = defineProps<{ class?: HTMLAttributes['class'] }>()

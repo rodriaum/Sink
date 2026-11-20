@@ -4,7 +4,7 @@ import type { RangeCalendarPrevProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { ChevronLeftIcon } from '@lucide/vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { RangeCalendarPrev, useForwardProps } from 'reka-ui'
 import { buttonVariants } from '@/components/ui/button'
 

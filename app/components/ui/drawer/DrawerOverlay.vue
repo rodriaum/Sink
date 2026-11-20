@@ -2,7 +2,7 @@
 import type { DrawerOverlayProps } from 'reka-ui'
 import type { HTMLAttributes } from 'vue'
 import { reactiveOmit } from '@vueuse/core'
-import { cn } from 'cn'
+import { cn } from '~/lib/utils'
 import { DrawerOverlay } from 'reka-ui'
 
 const props = defineProps<DrawerOverlayProps & { class?: HTMLAttributes['class'] }>()

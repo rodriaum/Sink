@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { PlusIcon } from '@lucide/vue';
+import type { NumberFieldIncrementProps } from 'reka-ui'
 
-import type { NumberFieldIncrementProps } from "reka-ui"
-import type { HTMLAttributes } from "vue"
-import { reactiveOmit } from "@vueuse/core"
-import { NumberFieldIncrement, useForwardProps } from "reka-ui"
-import { cn } from "@/lib/utils"
+import type { HTMLAttributes } from 'vue'
+import { PlusIcon } from '@lucide/vue'
+import { reactiveOmit } from '@vueuse/core'
+import { cn } from 'cn'
+import { NumberFieldIncrement, useForwardProps } from 'reka-ui'
 
-const props = defineProps<NumberFieldIncrementProps & { class?: HTMLAttributes["class"] }>()
+const props = defineProps<NumberFieldIncrementProps & { class?: HTMLAttributes['class'] }>()
 
-const delegatedProps = reactiveOmit(props, "class")
+const delegatedProps = reactiveOmit(props, 'class')
 
 const forwarded = useForwardProps(delegatedProps)
 </script>

@@ -1,10 +1,10 @@
-import type { VariantProps } from "class-variance-authority"
-import { cva } from "class-variance-authority"
+import type { VariantProps } from 'class-variance-authority'
+import { cva } from 'class-variance-authority'
 
-export { default as Bubble } from "./Bubble.vue"
-export { default as BubbleContent } from "./BubbleContent.vue"
-export { default as BubbleGroup } from "./BubbleGroup.vue"
-export { default as BubbleReactions } from "./BubbleReactions.vue"
+export { default as Bubble } from './Bubble.vue'
+export { default as BubbleContent } from './BubbleContent.vue'
+export { default as BubbleGroup } from './BubbleGroup.vue'
+export { default as BubbleReactions } from './BubbleReactions.vue'
 
 export const bubbleVariants = cva(
   'gap-1 data-[align=end]:self-end max-w-[80%] data-[variant=ghost]:max-w-full group-data-[align=end]/message:self-end group/bubble relative flex w-fit min-w-0 flex-col',
@@ -21,7 +21,7 @@ export const bubbleVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: 'default',
     },
   },
 )
@@ -41,8 +41,8 @@ export const bubbleReactionsVariants = cva(
       },
     },
     defaultVariants: {
-      side: "bottom",
-      align: "end",
+      side: 'bottom',
+      align: 'end',
     },
   },
 )
